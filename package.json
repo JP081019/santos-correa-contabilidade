@@ -1,23 +1,8 @@
 {
-  "name": "santos-assessoria-contabil",
+  "name": "santos-correa-contabilidade",
   "version": "1.0.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "bootstrap-icons": "^1.11.3",
-    "next": "14.2.35",
-    "react": "18.3.1",
-    "react-dom": "18.3.1"
-  },
-  "devDependencies": {
-    "@types/node": "^22.7.4",
-    "@types/react": "^18.3.11",
-    "@types/react-dom": "^18.3.1",
-    "typescript": "^5.6.3"
-  }
+  "scripts": { "dev": "next dev", "build": "next build", "start": "next start", "typecheck": "tsc --noEmit" },
+  "dependencies": { "bootstrap-icons": "1.13.2", "next": "16.4.0", "react": "19.3.0", "react-dom": "19.3.0" },
+  "devDependencies": { "@types/node": "^24.0.0", "@types/react": "^19.0.0", "@types/react-dom": "^19.0.0", "typescript": "^5.9.0" }
 }

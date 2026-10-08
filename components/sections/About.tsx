@@ -1,0 +1,6 @@
+import Image from "next/image";
+import { assets, contacts } from "@/data/contacts";
+
+export default function About() {
+  return <section className="section about" id="sobre"><div className="container about-grid"><div className="about-copy" data-reveal><p className="eyebrow">Quem somos</p><h2>Conhecimento técnico. Atendimento próximo.</h2><p>Somos um escritório contábil comprometido em oferecer atendimento próximo, responsável e eficiente.</p><p>À frente da Santos Corrêa estão os contadores Rafaela Santos Corrêa, Gerente Técnica, e Vagner Corrêa, Gerente Administrativo.</p><p>Unimos conhecimento técnico e atendimento próximo para oferecer soluções nas áreas contábil, fiscal, tributária, trabalhista e empresarial.</p><p>Nosso propósito é construir relações de confiança e acompanhar nossos clientes em cada etapa do desenvolvimento de seus negócios.</p><div className="team-names">{contacts.slice(0, 2).map(member => <div key={member.name}><h3>{member.name}</h3><p>{member.role}</p></div>)}</div></div><figure className="team-photo" data-reveal><Image src={assets.team} width={794} height={1039} sizes="(max-width: 800px) 90vw, 40vw" alt="Rafaela Santos Corrêa e Vagner Corrêa, à frente da Santos Corrêa Contabilidade" /><figcaption>Por trás dos números, pessoas que acompanham você.</figcaption></figure></div></section>;
+}

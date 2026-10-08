@@ -1,0 +1,8 @@
+import Image from "next/image";
+import { assets, contacts, instagram, navigation } from "@/data/contacts";
+import { whatsapp } from "@/lib/whatsapp";
+import Icon from "@/components/ui/Icon";
+
+export default function Footer() {
+  return <footer className="site-footer" id="site-footer"><div className="container"><div className="footer-top"><div className="footer-brand"><Image src={assets.logo} width={2158} height={729} sizes="250px" alt="Santos Corrêa Contabilidade" /><p>Contabilidade próxima para empresas que querem crescer.</p><address>João de Carvalho, s/n<br />Bairro Campestre · Imbituba / SC</address><a className="social-link" href={instagram} target="_blank" rel="noopener noreferrer"><Icon name="instagram" /> Santos Correa Contabilidade<Icon name="arrow-up-right" /></a></div><div className="footer-navigation"><h2>Explore</h2>{navigation.map(link => <a key={link.href} href={link.href}>{link.label}</a>)}</div><div className="footer-contacts"><h2>Fale com nossa equipe</h2>{contacts.map(contact => <div className="contact-person" key={contact.number}><h3>{contact.name}</h3><a href={`tel:+${contact.number}`}>{contact.phone}</a>{contact.email && <a href={`mailto:${contact.email}`}>{contact.email}</a>}<a className="contact-whatsapp" href={whatsapp(undefined, contact.number)} target="_blank" rel="noopener noreferrer"><Icon name="whatsapp" /> Conversar pelo WhatsApp</a></div>)}</div></div><div className="footer-bottom"><p>© {new Date().getFullYear()} Santos Corrêa Contabilidade.</p><a className="creative-credit" href="https://jpcreative.com.br" target="_blank" rel="noopener noreferrer"><span>Desenvolvido por JPCreative</span><Image src={assets.creative} width={1774} height={887} sizes="96px" alt="Logo JPCreative" /></a></div></div></footer>;
+}
